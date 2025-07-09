@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For Srijani ❤️</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+    body {
+      overflow-x: hidden;
+      background: #f0f0f0;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Short Stack', cursive;
+      background-color: #ffebee;
+      touch-action: manipulation;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .paper-stack {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      height: 700px;
+      margin-top: 50px;
+    }
+    
+    .paper {
+      position: absolute;
+      width: 260px;
+      height: 340px;
+      background: white;
+      background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+      background-size: 500px;
+      background-position: center center;
+      border-radius: 10px;
+      box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      transform: rotate(5deg);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      margin-left: -130px;
+      margin-top: -170px;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .paper-wrap {
+      width: 100%;
+      flex: 1;
+      overflow-y: auto;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    /* Instruction paper */
+    .paper:first-child {
+      z-index: 1000;
+      opacity: 1;
+      width: 280px;
+      height: 360px;
+      margin-left: -140px;
+      margin-top: -180px;
+    }
+    
+    @media (max-width: 768px) {
+      .paper {
+        width: 220px;
+        height: 300px;
+        padding: 12px;
+        margin-left: -110px;
+        margin-top: -150px;
+      }
+      
+      .paper:first-child {
+        width: 240px;
+        height: 320px;
+        margin-left: -120px;
+        margin-top: -160px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .paper {
+        width: 200px;
+        height: 280px;
+        padding: 10px;
+        margin-left: -100px;
+        margin-top: -140px;
+      }
+      
+      .paper:first-child {
+        width: 220px;
+        height: 300px;
+        margin-left: -110px;
+        margin-top: -150px;
+      }
+    }
+    
+    .paper.image {
+      justify-content: flex-start;
+    }
+    
+    .paper.image p {
+      margin: 6px 0;
+      font-size: 16px;
+      font-family: 'Short Stack', cursive;
+      text-align: center;
+      color: #000;
+      opacity: 0.9;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .paper.image p {
+        font-size: 14px;
+        margin: 5px 0;
+      }
+    }
+    
+    .paper.image img {
+      max-width: 90%;
+      max-height: 140px;
+      border-radius: 5px;
+      margin: 8px 0;
+      width: auto;
+      user-select: none;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .paper.image img {
+        max-height: 110px;
+      }
+    }
+    
+    .paper.red {
+      background-color: #ffcccc;
+      background-image: none;
+    }
+    
+    .paper.heart {
+      background-color: #ffcccc;
+      background-image: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      padding: 0;
+      position: relative;
+    }
+    
+    .paper.heart::after {
+      content: "";
+      background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 160px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+    }
+    
+    @media (max-width: 768px) {
+      .paper.heart {
+        width: 170px;
+        height: 170px;
+      }
+      
+      .paper.heart::after {
+        background-size: 130px;
+      }
+    }
+    
+    .paper p {
+      font-size: 17px;
+      font-family: 'Homemade Apple', cursive;
+      margin: 6px 0;
+      word-break: break-word;
+      color: rgb(0, 0, 100);
+      opacity: 0.75;
+      line-height: 1.4;
+      width: 100%;
+    }
+    
+    .paper .p1 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    
+    /* Bengali text styling */
+    .paper p[style*="font-size: 12px"] {
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin: 5px 0 !important;
+      padding: 0 5px;
+    }
+    
+    /* Cake paper styling */
+    .paper.cake img {
+      max-height: 180px;
+      margin: 0 auto;
+    }
+    
+    @media (max-width: 768px) {
+      .paper p {
+        font-size: 15px;
+      }
+      
+      .paper.cake img {
+        max-height: 140px;
+      }
+    }
+    
+    .back-btn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Short Stack', cursive;
+      z-index: 1001;
+      font-size: 16px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    
+    .back-btn:hover {
+      background-color: #e05555;
+    }
+    
+    @media (max-width: 480px) {
+      .back-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+      }
+    }
+    
+    #autoDragButton {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      font-family: 'Short Stack', cursive;
+      margin-top: 20px;
+    }
+    
+    #autoDragButton:hover {
+      background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+  <div class="paper-stack">
+    <!-- Drag instruction always on top initially -->
+    <div class="paper" style="z-index: 1000; opacity: 1;">
+      <div class="paper-wrap">
+        <p class="p1">Jhinu! Drag the papers to move!</p>
+      </div>
+    </div>
+    
+    <!-- Papers in 4,3,2,1 order (4 at bottom, 1 at top) -->
+    <!-- Paper 4 -->
+    <div class="paper">
+      <div class="paper-wrap">
+        <p class="p1">You are Amazing</p>
+        <p class="p1">Birhtday Girl <span style="color: red !important;">❤️</span></p>
+      </div>
+    </div>
+    
+    <!-- Paper 3 -->
+    <div class="paper red">
+      <div class="paper-wrap">
+        <p class="p1">Someone I admire</p>
+        <p class="p2">the most</p><p> Hope your day is as beautiful as you are!</p>
+      </div>
+    </div>
+    
+    <!-- Paper 2 -->
+    <div class="paper image">
+      <div class="paper-wrap">
+        <p>How can be</p>
+        <p>someone so cute, gentle, radiant, and endlessly unforgettable ❤️</p>
+        <img src="images/pic3.jpg" />
+      </div>
+    </div>
+    
+    <!-- Paper 1 -->
+    <div class="paper image">
+      <div class="paper-wrap">
+        <p>Happy Birthday to the girl</p>
+        <p>who makes my heart skip a beat every time she smiles.</p>
+        <img src="images/pic2.jpg" />
+      </div>
+    </div>
+    
+    <!-- Heart note (top of the stack) -->
+    <div class="paper image">
+      <div class="paper-wrap">
+        <p>Every moment with you feels like a dream come true.</p>
+        <p>Happy Birthday, Jhinu ❤️✨🎂🎉</p>
+        <img src="images/pic1.jpg" />
+      </div>
+    </div>
+    
+    <div class="paper heart"></div>
+  </div>
+  <div class="paper">
+    <div class="paper-wrap">
+      <p style="font-size: 14px; line-height: 1.6; text-align: center;">
+        মধ্যরাতের নীরবতা, চোখে নিবিড় আঁধার;<br>
+        এলোমেলো এই জীবনে, পথগুলো ভীষণ বাঁকা।<br>
+        জানি তুই হাসিস আজও, তোর সূর্যমুখী ফোটে রোদ মেখে;<br>
+        শুধু ভালো থাক তুই,এই শহরের ভীড়ে, এই পথ চেয়ে।<br>
+        আমার মননের গভীরে যে অচেনা মেঘ ভাসে,<br>
+        তোর হাসির আলোয় সে মেঘগুলোও যেন হাসে।<br>
+        তোর পৃথিবী যেন ভালোবেসে বাঁচে।<br>
+      </p>
+    </div>
+  </div>
+  <div class="paper cake">
+    <div class="paper-wrap">
+      <img src="images/birthday_cake.png" alt="Birthday Cake" style="width: 100%; height: auto;">
+    </div>
+  </div>
+  <div class="paper heart"></div>
+  <button class="back-btn" onclick="window.location.href='index.html'">yup!Birthday Girl</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const allPapers = document.querySelectorAll('.paper');
+      // Exclude the drag instruction paper from the stack
+      const papers = Array.from(allPapers).slice(1);
+      const totalPapers = papers.length;
+      let isDragging = false;
+      let currentPaper = null;
+      let offsetX, offsetY;
+      
+      // Position papers in a stack with slight offsets (4,3,2,1 order)
+      papers.forEach((paper, index) => {
+        // Calculate position (paper 4 at bottom to paper 1 at top)
+        const stackPosition = totalPapers - 1 - index;
+        
+        // Calculate rotation and offset for each paper
+        const rotation = (stackPosition % 2 === 0) ? 
+          -2 - (stackPosition * 1.5) : 
+          2 + (stackPosition * 1.5);
+        
+        const xOffset = (stackPosition % 2 === 0) ? 
+          -10 - (stackPosition * 5) : 
+          10 + (stackPosition * 5);
+        
+        const yOffset = -10 - (stackPosition * 5);
+        
+        // Set initial position (centered with slight offsets)
+        paper.style.left = `calc(50% + ${xOffset}px)`;
+        paper.style.top = `calc(50% + ${yOffset}px)`;
+        paper.style.transform = `rotate(${rotation}deg)`;
+        paper.style.zIndex = stackPosition + 1;
+        
+        // Show papers one by one from bottom to top
+        setTimeout(() => {
+          paper.style.opacity = '1';
+        }, stackPosition * 300);
+      });
+      
+      // Make all papers draggable
+      allPapers.forEach(paper => {
+        paper.addEventListener('mousedown', startDrag);
+        paper.addEventListener('touchstart', startDrag, { passive: false });
+      });
+      
+      function startDrag(e) {
+        e.preventDefault();
+        isDragging = true;
+        currentPaper = e.target.closest('.paper');
+        
+        if (e.type === 'mousedown') {
+          offsetX = e.clientX - currentPaper.getBoundingClientRect().left;
+          offsetY = e.clientY - currentPaper.getBoundingClientRect().top;
+        } else {
+          offsetX = e.touches[0].clientX - currentPaper.getBoundingClientRect().left;
+          offsetY = e.touches[0].clientY - currentPaper.getBoundingClientRect().top;
+        }
+        
+        currentPaper.style.zIndex = '1000';
+        currentPaper.style.transition = 'none';
+        
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('touchmove', drag, { passive: false });
+        document.addEventListener('mouseup', endDrag);
+        document.addEventListener('touchend', endDrag);
+      }
+      
+      function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        let clientX, clientY;
+        
+        if (e.type === 'mousemove') {
+          clientX = e.clientX;
+          clientY = e.clientY;
+        } else {
+          clientX = e.touches[0].clientX;
+          clientY = e.touches[0].clientY;
+        }
+        
+        currentPaper.style.left = `${clientX - offsetX}px`;
+        currentPaper.style.top = `${clientY - offsetY}px`;
+      }
+      
+      function endDrag() {
+        isDragging = false;
+        currentPaper.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        
+        document.removeEventListener('mousemove', drag);
+        document.removeEventListener('touchmove', drag);
+        document.removeEventListener('mouseup', endDrag);
+        document.removeEventListener('touchend', endDrag);
+      }
+    });
+  </script>
+</body>
+</html>
